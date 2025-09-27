@@ -1,0 +1,35 @@
+clc
+clear
+close all
+
+% to generate a random no. between an interval a-->b
+a=-1;
+b=1;
+n=500;
+X=1:n;
+Y=1:n;
+
+p=1;
+q=1;
+x=0;
+y=0;
+r=1;
+fplot(@(t) r*sin(t)+x, @(t) r*cos(t)+y);
+hold on
+for i=1:n
+    X(i)=a+((b-a)*rand);
+    Y(i)=a+((b-a)*rand);
+    d=sqrt((X(i)^2)+(Y(i)^2));
+    if d>r
+        p=p+1;
+
+    else
+        q=q+1;
+    end
+    scatter(X(i),Y(i));
+
+    drawnow;
+    pause(0.0001);
+end
+pie=(q/n)*4;
+
