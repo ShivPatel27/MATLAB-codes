@@ -1,4 +1,4 @@
-# MATLAB Codes
+# Numerical Analysis / Computational Physics
 
 **Description:**  
 This directory contains MATLAB scripts developed for computational physics coursework and numerical analysis practice.  
